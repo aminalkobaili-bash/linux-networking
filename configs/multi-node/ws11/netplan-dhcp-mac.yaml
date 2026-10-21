@@ -1,0 +1,10 @@
+# /etc/netplan/00-installer-config.yaml (ws11) — DHCP with a fixed MAC for the r1 reservation
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: true
+      macaddress: 10:10:10:10:10:BA
+    #  addresses:
+     #   - 10.10.0.2/18
+     # gateway4: 10.10.0.1
+  version: 2

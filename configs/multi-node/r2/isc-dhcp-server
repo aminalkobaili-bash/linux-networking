@@ -1,0 +1,3 @@
+# /etc/default/isc-dhcp-server (r2) — active lines
+INTERFACESv4="enp0s8"
+INTERFACESv6=""

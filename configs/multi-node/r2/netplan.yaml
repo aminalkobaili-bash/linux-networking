@@ -1,0 +1,15 @@
+# /etc/netplan/00-installer-config.yaml (r2)
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: no
+      addresses:
+        - 10.100.0.12/16
+      routes:
+      - to: 10.10.0.0/18
+        via: 10.100.0.11
+    enp0s8:
+      dhcp4: no
+      addresses:
+        - 10.20.0.1/26
+  version: 2

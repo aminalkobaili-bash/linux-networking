@@ -1,0 +1,20 @@
+# /etc/netplan/00-installer-config.yaml (ws2)
+# Note: route "via" points to ws2's own address; kept verbatim from the lab.
+network:
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: no
+      addresses:
+        - 10.0.2.50/24
+      gateway4: 10.0.2.2
+      nameservers:
+        addresses: [1.1.1.1, 8.8.8.8]
+    enp0s8:
+      dhcp4: no
+      addresses:
+        - 172.24.116.8/12
+      routes:
+        - to: 192.168.0.0/16
+          via: 172.24.116.8
+  version: 2

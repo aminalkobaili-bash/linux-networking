@@ -1,0 +1,9 @@
+# /etc/netplan/00-installer-config.yaml (ws21) — static stage; later switched to DHCP from r2
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: no
+      addresses:
+        - 10.20.0.10/26
+      gateway4: 10.20.0.1
+  version: 2
